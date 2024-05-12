@@ -9,16 +9,17 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>Lab4</artifactId>
+	<artifactId>Lab5</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>Lab4</name>
+	<name>Lab5</name>
 	<description>Demo project for Spring Boot</description>
 	<modules>
-		<module>dao</module>
-        <module>services</module>
-        <module>controller</module>
-    </modules>
+		<module>owners</module>
+		<module>entities</module>
+		<module>cats</module>
+		<module>external_interfaces</module>
+	</modules>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -91,6 +92,37 @@
 			<artifactId>spring-beans</artifactId>
 			<version>6.1.5</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-rabbit</artifactId>
+			<version>3.1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>6.2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>6.2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>6.2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.12.5</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
